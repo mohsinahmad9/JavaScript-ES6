@@ -1,0 +1,25 @@
+<script>
+    let mohsin = {name:'Mohsin ahmad'},
+        risha = {name:'Risha Khan'},
+        nisha = {name:'Neelam Khan'};
+    
+
+    let userRoles = new Map();
+    userRoles.set(mohsin, 'Managing Director').set(risha,'CEO').set(nisha,'CFO');
+    //another way to add role 
+    let UserPost = new Map([
+        [mohsin,'Developer'],
+        [risha,'Operator'],
+        [nisha,'Constables'],
+    ]);
+    console.log(userRoles.get(risha));
+    console.log(userRoles.size);
+  
+  for( const user of UserPost.entries() )
+  {
+    console.log(user[0].name);
+  } 
+  userRoles.forEach((role,user)=> console.log(user.name+" "+role))
+</script>
+
+

@@ -1,0 +1,29 @@
+<script>
+    function *testGenerator()
+    {
+        console.log('startng values....');
+        yield 'this is yield no. 1';
+        console.log('running values....');
+        yield 'this is yield no. 2';
+        console.log('ending funtion values....');
+        yield 'this is yield no. 3';
+
+    }
+
+    let gen =  testGenerator();
+    console.log(gen.next());
+    //console.log(gen.next());
+    //console.log(gen.next());
+    //console.log(gen.next());
+
+    //comment for of loop and uncomment above statements
+
+    //using for of
+    // for(let val of gen)
+    // {
+    //     console.log(val)
+    // } 
+
+    // setting yield value from function
+    
+</script>

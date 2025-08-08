@@ -1,0 +1,28 @@
+<script>
+    let arr = [2,5,9,12,45,67,3,6,78];
+    //Filter function get all values which are greater than 10
+
+    // using arrow function 
+    // I am not using parentheses because there is only one arg also not using return keyword 
+    let arr1 = arr.filter(val => val > 10);
+    console.log(arr1);
+
+    // if you are not getting above function easily i am again explaining it in  normal arrow function
+    
+    let arr2 = arr.filter((val) => { return val > 10});
+    console.log(arr2);
+    // you can use map Anonymous function as well 
+
+    let object1 = [
+        {name : 'Mohsin', position : 'Developer' },
+        {name : 'Kamal', position : 'UI Designer' },
+        {name : 'Adil', position : 'Developer' },
+        {name : 'Risha', position : 'Operator' },
+        {name : 'Shina', position : 'Manager' },
+        
+    ];
+
+    let developer = object1.filter(val => val.position == 'Developer' );
+
+    console.log(developer);
+</script>

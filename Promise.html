@@ -1,0 +1,18 @@
+<script>
+    let complete = true;
+    let promise = new Promise(function(resolve,reject){
+        
+        if(complete)
+        {
+            resolve('I am Resolved');
+        }
+        else{
+            reject('I am rejected');
+        }
+    });
+    promise.then(function(arg){
+        console.log(arg)
+    }).catch(function(err){
+        console.log(err);
+    })
+</script>

@@ -1,0 +1,35 @@
+<script>
+    function letVarCostExample(){
+	if(true)
+	{
+		let s = 10;
+		var v = s;
+		const c = 6;
+		console.log(c);
+	}
+	console.log(v);
+    }
+    letVarCostExample();
+    //Rest parameter 
+    function sum(a,b,...args) 
+    {
+        console.log(a,b,args)
+    }
+
+    sum(1, 2, 3,4,5,6,);
+
+    //Rest Parameter using Arrow function
+    const add = (...args) =>{
+        console.log(args)
+    }
+    add(3,4,5,6,7,8);
+
+    //Spread Parameter
+
+
+    let odd = ['three','five','seven'];
+    let number = [1,2,3, ...odd];
+    console.log(number)
+
+
+</script>

@@ -1,0 +1,27 @@
+<script>
+  
+    let arr2 = [2,3,4,6,7,9];
+
+    //Some operation without map function
+
+    let arr3 = [];
+    for(let i=0;i<arr2.length;i++)
+    {
+        arr3[i] = arr2[i]*2;
+    }
+    console.log(arr3);
+
+    // Same operation in map anonymous function
+    let arr4 = arr2.map(function(val){
+        return val*2;
+    });
+    console.log(arr4);
+
+    // same operation  with map Arrow function
+    let arr5 = arr2.map((val)=>{return val*2});
+    console.log(arr5);
+
+    //same operation with map Arrow (conpac)
+    let arr6 = arr2.map(val => val * 2);
+    console.log(arr6);
+</script>

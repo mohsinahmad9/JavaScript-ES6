@@ -1,0 +1,27 @@
+<script>
+    let numbers = [10,23,45,67,32,12];
+    let itr =  numbers[Symbol.iterator]();
+    let str = "creedible academy";
+    let sItr = str[Symbol.iterator]();
+
+    let res = sItr.next();
+    while(!res.done)
+    {
+        console.log(res.value);
+        res = sItr.next();
+    }
+    
+    //this is how we can print single single value
+    //console.log(itr.next());
+    //console.log(itr.next());
+    
+    //now use while loop
+
+    let result = itr.next();
+    while(!result.done)
+    {
+        console.log(result.value);
+        result = itr.next();
+    }
+    console.log(result.done);
+</script>

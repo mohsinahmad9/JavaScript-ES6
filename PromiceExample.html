@@ -1,0 +1,23 @@
+<script>
+    function delayedMultiply(x, y) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (typeof x === 'number' && typeof y === 'number') {
+                    resolve(x * y);
+                } else {
+                    reject('Invalid input. Both arguments must be numbers.');
+                }
+            }, 1000); // Delay of 1 second
+        });
+    }
+
+    // Usage:
+    delayedMultiply(5, 10)
+        .then(result => {
+            console.log(result); // Output: 50
+        })
+        .catch(error => {
+            console.error(error); // Output: Invalid input. Both arguments must be numbers.
+        });
+
+</script>

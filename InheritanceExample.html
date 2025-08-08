@@ -1,0 +1,27 @@
+<script>
+class Animal
+{
+    eat(){
+        console.log("eating...");
+    }
+    sleep(){
+        console.log("sleep...");
+    }
+    move(){
+        console.log("moving...");
+    }
+}
+class Dog extends Animal
+{
+   
+    run(){
+        console.log("dog run fast")
+    }
+}
+
+var dog = new Dog();
+
+dog.move();
+dog.eat();
+dog.run();
+</script>

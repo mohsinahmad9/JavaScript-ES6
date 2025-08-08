@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function useState(val)
+        {
+            let state = val;
+            function setval(newval)
+            {
+                state = newval;
+            }
+            return [state, setval];
+        }
+		
+		let [data, setData] = useState(12)
+		
+		setData(45);
+		console.log(setData);
+		console.log(data);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<script>
+    function welcome()
+    {
+        console.log("Welcome to credible academy");
+    }
+    function welcome2()
+    {
+        console.log("credible academy welcomes you all");
+    }
+    function add(num1,num2,callBack)
+    {
+        callBack();
+        console.log(num1 + num2);
+    }
+
+    let a=34;
+    let b=30;
+    add(a,b,welcome);//callback function
+    add(a,b,welcome2);
+    //Now calling anonymous function
+    add(2,5,function(){
+        console.log('Some one is welcoming you');
+    })
+</script>

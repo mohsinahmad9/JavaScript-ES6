@@ -1,0 +1,53 @@
+<script>
+    // var x = 'Hello Credible';    this is String 
+    // var x = 25;                  Number
+    // var x = true                 Boolean
+    // var x = ['a','b','c']        Array
+    // var x = {f:'isha',l:'jug'}   Object
+    // var x = null;                Null
+    // var x;                       undefined
+    //Now lets discuss about Symbol
+    // decalre Symbol
+    var x = Symbol('Hello');
+    var y = Symbol('Hello');
+    console.log(x);
+    console.log(typeof x);
+
+    console.log(x===y);//false
+    console.log(x==y); // false
+    //it return false bcoz both are unique just bcoz of Symbol
+
+   let d = Symbol('hello');
+   // symbol description property
+   console.log(d.description);
+
+   //How we can use symbol in object
+   let age = Symbol('age');
+   let id = Symbol();
+   let user = {
+    name:'Mohsin Ahmad',
+    class:'Developer',
+    [age] : 25,
+   };
+   //We can pass value outside the object decalartion
+   user[id] = 12;
+   user.city = 'sre';
+   console.log(user);
+   //how we can see separate value of object
+   console.log(user.name);//mohsin
+   //but in sybol case you cannot use as it normal 
+   console.log(user.age);
+   //so the right way is 
+   console.log(user[age]);
+
+   // using for..in loop
+   for(let key in user)
+   {
+     console.log(key)
+   }// it skips symbol value
+
+   //to convert in json 
+   console.log(JSON.stringify(user));
+   
+    
+</script>
